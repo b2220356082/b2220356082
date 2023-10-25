@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "consent_test",
+      "setup": "",
+      "run": "if (find . -type f -name \"*.txt\" -exec grep -q \"I acknowledge\" {} \\;) &>/dev/null; then exit 0; else exit 1; fi",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "photo_test",
+      "setup": "",
+      "run": "if (find . -type f \\( -name \"*.jpg\" -o -name \"*.jpeg\" -o -name \"*.png\" \\)) &>/dev/null; then exit 0; else exit 1; fi",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 1,
+      "points": null
+    }
+  ]
+}
